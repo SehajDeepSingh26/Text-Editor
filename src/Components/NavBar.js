@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
   return (
@@ -14,19 +15,27 @@ export default function Navbar(props) {
             <li className="nav-item active">
                 <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
             </li>
-            <li className="nav-item">
-                <a className="nav-link" href="/">{props.aboutText}</a>
-            </li>
+            {/* <li className="nav-item">
+                <Link className="nav-link" to="/about">{props.aboutText}</Link>
+            </li> */}
             
             </ul>
             {/* <form className="form-inline my-2 my-lg-0">
             <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
             <button className="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
             </form> */}
-            <div className = {`custom-control custom-switch text-${props.mode==='light'?'dark':'light'}`}>
-                <input type="checkbox" onClick={props.toggleMode} className="custom-control-input" id="customSwitch1"/>
+            <div className = {`black custom-control custom-switch text-${props.mode==='light'?'dark':'light'}`}>
+                <input type="checkbox" onClick={props.BWtoggleMode} className="custom-control-input" id="customSwitch1"/>
                 <label className="custom-control-label" htmlFor="customSwitch1">Enable dark mode</label>
             </div>
+            {/* <div className = {`Borwn-yellow mx-2 custom-control custom-switch text-${props.mode==='light'?'dark':'light'}`}>
+                <input type="checkbox" onClick={props.YBtoggleMode} className="custom-control-input" id="customSwitch1"/>
+                <label className="custom-control-label" htmlFor="customSwitch1">Brown-Yellow mode</label>
+            </div>
+            <div className = {`orange-forestGreen mx-2 custom-control custom-switch text-${props.mode==='light'?'dark':'light'}`}>
+                <input type="checkbox" onClick={props.OGtoggleMode} className="custom-control-input" id="customSwitch1"/>
+                <label className="custom-control-label" htmlFor="customSwitch1">Orange-green mode</label>
+            </div> */}
         </div>
     </nav>
   )
